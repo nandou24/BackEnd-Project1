@@ -15,7 +15,7 @@ const router = Router();
 //! crear un nuevo usuario
 //* /api/auth/new
 router.post(
-  "/new",
+  "/newUser",
   [
     check("name")
       .notEmpty()
@@ -31,7 +31,7 @@ router.post(
 
     check("password")
       .notEmpty()
-      .withMessage("El password es obligatoria")
+      .withMessage("El password es obligatorio")
       .isLength({ min: 6 })
       .withMessage("El password es mínimo de 6 caracteres"),
 
